@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Kelvin Mattos | Portfólio</title>
+
+    <link rel="icon" type="image/svg+xml" href="./assets/svg/favicon.svg" />
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+
+    <!-- CSS próprio -->
+    <link rel="stylesheet" href="./assets/css/index.css" />
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div id="loader" class="loader-screen">
+        <div class="loader-content">
+            <div class="loader-line">
+                <span id="loader-prefix" class="loader-text"></span>
+                <span id="loader-cursor" class="loader-cursor"></span>
+                <span id="loader-suffix" class="loader-text"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid px-4 px-lg-5">
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div id="mainMenu" class="collapse navbar-collapse justify-content-end">
+                    <ul class="navbar-nav gap-lg-3">
+                        <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#experiencias">Experiências</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#formacao">Formação</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#cursos">Cursos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#tecnologias">Tecnologias</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mapa lateral -->
+    <aside class="section-map" aria-label="Mapa das seções">
+        <a href="#home" data-section-target="home" aria-label="Início"><span></span></a>
+        <a href="#experiencias" data-section-target="experiencias" aria-label="Experiências"><span></span></a>
+        <a href="#formacao" data-section-target="formacao" aria-label="Formação"><span></span></a>
+        <a href="#cursos" data-section-target="cursos" aria-label="Cursos"><span></span></a>
+        <a href="#tecnologias" data-section-target="tecnologias" aria-label="Tecnologias"><span></span></a>
+        <a href="#contato" data-section-target="contato" aria-label="Contato"><span></span></a>
+    </aside>
+
+    <!-- Links laterais -->
+    <aside class="social-sidebar" aria-label="Redes sociais">
+        <a href="https://github.com/kelvinmattosdev" target="_blank" aria-label="GitHub">
+            <i class="bi bi-github"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/kelvinkauanmelomattos/" target="_blank" aria-label="LinkedIn">
+            <i class="bi bi-linkedin"></i>
+        </a>
+
+        <span class="vertical-line"></span>
+    </aside>
+
+    <main id="page-content" class="page-content">
+        <!-- Home -->
+        <section id="home" class="section hero-section">
+            <div class="container">
+                <div class="row align-items-center min-vh-100">
+                    <div class="col-lg-7">
+                        <p class="section-kicker">PORTFÓLIO</p>
+
+                        <h1 class="hero-title">
+                            <span id="glitch-name">Kelvin Mattos</span>
+                        </h1>
+
+                        <div class="role-wrapper">
+                            <span class="role-prefix">Atuando como</span>
+                            <span id="role-text" class="role-text">Programador</span>
+                        </div>
+
+                        <p class="hero-description">
+                            Estudante de Desenvolvimento de Software Multiplataforma, com foco em
+                            programação, automação, infraestrutura, web e soluções digitais.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-5 mt-5 mt-lg-0">
+                        <div class="laptop-card" aria-label="Notebook com terminal editável">
+                            <div class="laptop-screen">
+                                <div class="terminal-bar">
+                                    <div class="terminal-dots" aria-hidden="true">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <span class="terminal-title">C:\Kelvin\portfolio &gt; cmd</span>
+                                </div>
+
+                                <div class="terminal-window" id="terminal-window">
+                                    <pre id="terminal-highlight" aria-hidden="true"></pre>
+                                    <textarea id="terminal-input" spellcheck="false" aria-label="Terminal editável">const perfil = {
+  nome: "Kelvin Mattos",
+  stack: "Web / Infra / Automação"
+}</textarea>
+                                </div>
+                            </div>
+
+                            <div class="laptop-base" aria-hidden="true">
+                                <span class="laptop-trackpad"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#experiencias" class="scroll-indicator">
+                    <i class="bi bi-chevron-double-down"></i>
+                    <span>Experiências</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Experiências -->
+        <section id="experiencias" class="section content-section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-kicker">HISTÓRICO</p>
+                    <h2 class="shine-heading">Experiências</h2>
+                </div>
+
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <span class="timeline-date">Estudos contínuos</span>
+                        <h3>Aprendizado autodidata</h3>
+                        <p>
+                            Estudo em casa por meio de cursos online, documentação, prática em projetos
+                            próprios e experimentação com tecnologias web, automação e infraestrutura.
+                        </p>
+                        <div class="chips">
+                            <span>Alura</span>
+                            <span>Udemy</span>
+                            <span>YouTube</span>
+                            <span>Documentação</span>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <span class="timeline-date">23/10/2023 - Atual</span>
+                        <h3>Jaú Pesca</h3>
+                        <p>
+                            Atuação profissional com aplicação prática de tecnologia, suporte,
+                            organização de processos e desenvolvimento de soluções para demandas internas.
+                        </p>
+                        <div class="chips">
+                            <span>Suporte</span>
+                            <span>Automação</span>
+                            <span>Processos</span>
+                            <span>T.I.</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formação -->
+        <section id="formacao" class="section content-section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-kicker">EDUCAÇÃO</p>
+                    <h2 class="shine-heading">Formação Acadêmica</h2>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <article class="tech-card">
+                            <span class="card-number">01</span>
+                            <h3>Cleomar de Barros Castilho Marques</h3>
+                            <p>6º ano ao 1º ano do Ensino Médio.</p>
+                            <strong>2019 - 2023</strong>
+                        </article>
+                    </div>
+
+                    <div class="col-md-4">
+                        <article class="tech-card">
+                            <span class="card-number">02</span>
+                            <h3>Caetano Lourenço de Camargo</h3>
+                            <p>2º ao 3º ano do Ensino Médio.</p>
+                            <strong>2024 - 2025</strong>
+                        </article>
+                    </div>
+
+                    <div class="col-md-4">
+                        <article class="tech-card highlight-card">
+                            <span class="card-number">03</span>
+                            <h3>FATEC Jahu</h3>
+                            <p>Tecnologia em Desenvolvimento de Software Multiplataforma.</p>
+                            <strong>2026 - 2028</strong>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cursos -->
+        <section id="cursos" class="section content-section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-kicker">CERTIFICAÇÕES</p>
+                    <h2 class="shine-heading">Cursos e Certificações</h2>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <article class="tech-card">
+                            <h3>n8n pela Udemy</h3>
+                            <p>Curso focado em automação de fluxos, integrações, webhooks e criação de processos
+                                automatizados.</p>
+                            <strong>12 horas</strong>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6">
+                        <article class="tech-card">
+                            <h3>Programação pela Alura</h3>
+                            <p>Estudos diversos envolvendo lógica, desenvolvimento web, ferramentas e fundamentos de
+                                programação.</p>
+                            <strong>+100 horas</strong>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6">
+                        <article class="tech-card">
+                            <h3>Estudos independentes</h3>
+                            <p>Aprendizado por vídeos, projetos próprios, documentação oficial e experimentação prática.
+                            </p>
+                            <strong>Sem certificação</strong>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6">
+                        <article class="tech-card">
+                            <h3>FATEC</h3>
+                            <p>Formação superior em andamento na área de desenvolvimento de software multiplataforma.
+                            </p>
+                            <strong>Cursando</strong>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tecnologias -->
+        <section id="tecnologias" class="section content-section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-kicker">HARD SKILLS</p>
+                    <h2 class="shine-heading">Tecnologias</h2>
+                </div>
+
+                <div class="skills-grid">
+                    <article class="skill-group">
+                        <h3>Linguagens</h3>
+                        <div class="tech-icon-list">
+                            <span class="tech-icon javascript" data-tooltip="JavaScript" aria-label="JavaScript"
+                                role="img"><img src="./assets/svg/javascript.svg" alt="" /></span>
+                            <span class="tech-icon typescript" data-tooltip="TypeScript" aria-label="TypeScript"
+                                role="img"><img src="./assets/svg/typescript.svg" alt="" /></span>
+                            <span class="tech-icon html5" data-tooltip="HTML5" aria-label="HTML5"
+                                role="img"><img src="./assets/svg/html5.svg" alt="" /></span>
+                            <span class="tech-icon css3" data-tooltip="CSS3" aria-label="CSS3"
+                                role="img"><img src="./assets/svg/css3.svg" alt="" /></span>
+                            <span class="tech-icon scss" data-tooltip="SCSS" aria-label="SCSS"
+                                role="img"><img src="./assets/svg/scss.svg" alt="" /></span>
+                            <span class="tech-icon csharp" data-tooltip="C#" aria-label="C#"
+                                role="img"><img src="./assets/svg/csharp.svg" alt="" /></span>
+                            <span class="tech-icon json" data-tooltip="JSON" aria-label="JSON"
+                                role="img"><img src="./assets/svg/json.svg" alt="" /></span>
+                        </div>
+                    </article>
+
+                    <article class="skill-group">
+                        <h3>Infraestrutura</h3>
+                        <div class="tech-icon-list">
+                            <span class="tech-icon traefik" data-tooltip="Traefik" aria-label="Traefik"
+                                role="img"><img src="./assets/svg/traefik.svg" alt="" /></span>
+                            <span class="tech-icon nginx" data-tooltip="Nginx" aria-label="Nginx"
+                                role="img"><img src="./assets/svg/nginx.svg" alt="" /></span>
+                            <span class="tech-icon docker" data-tooltip="Docker" aria-label="Docker"
+                                role="img"><img src="./assets/svg/docker.svg" alt="" /></span>
+                            <span class="tech-icon apache" data-tooltip="Apache" aria-label="Apache"
+                                role="img"><img src="./assets/svg/apache.svg" alt="" /></span>
+                        </div>
+                    </article>
+
+                    <article class="skill-group">
+                        <h3>Versionamento</h3>
+                        <div class="tech-icon-list">
+                            <span class="tech-icon git" data-tooltip="Git" aria-label="Git"
+                                role="img"><img src="./assets/svg/git.svg" alt="" /></span>
+                            <span class="tech-icon github" data-tooltip="GitHub" aria-label="GitHub"
+                                role="img"><img src="./assets/svg/github.svg" alt="" /></span>
+                        </div>
+                    </article>
+
+                    <article class="skill-group">
+                        <h3>Cloud</h3>
+                        <div class="tech-icon-list">
+                            <span class="tech-icon aws wide-logo" data-tooltip="AWS" aria-label="AWS"
+                                role="img"><img src="./assets/svg/aws.svg" alt="" /></span>
+                            <span class="tech-icon oracle wide-logo" data-tooltip="Oracle Cloud" aria-label="Oracle Cloud"
+                                role="img"><img src="./assets/svg/oracle-cloud.svg" alt="" /></span>
+                        </div>
+                    </article>
+
+                    <article class="skill-group">
+                        <h3>Bancos e Dados</h3>
+                        <div class="tech-icon-list">
+                            <span class="tech-icon postgresql" data-tooltip="PostgreSQL" aria-label="PostgreSQL"
+                                role="img"><img src="./assets/svg/postgresql.svg" alt="" /></span>
+                            <span class="tech-icon mysql" data-tooltip="MySQL" aria-label="MySQL"
+                                role="img"><img src="./assets/svg/mysql.svg" alt="" /></span>
+                            <span class="tech-icon xampp" data-tooltip="XAMPP" aria-label="XAMPP"
+                                role="img"><img src="./assets/svg/xampp.svg" alt="" /></span>
+                            <span class="tech-icon sqlserver" data-tooltip="SQL Server" aria-label="SQL Server"
+                                role="img"><img src="./assets/svg/sql-server.svg" alt="" /></span>
+                            <span class="tech-icon minio" data-tooltip="MinIO" aria-label="MinIO"
+                                role="img"><img src="./assets/svg/minio.svg" alt="" /></span>
+                            <span class="tech-icon supabase" data-tooltip="Supabase" aria-label="Supabase"
+                                role="img"><img src="./assets/svg/supabase.svg" alt="" /></span>
+                            <span class="tech-icon qdrant" data-tooltip="Qdrant" aria-label="Qdrant"
+                                role="img"><img src="./assets/svg/qdrant.svg" alt="" /></span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato" class="section content-section contact-section">
+            <div class="container">
+                <div class="section-heading contact-heading">
+                    <h2 class="shine-heading">Contato</h2>
+                </div>
+
+                <div class="contact-minimal">
+                    <p>Sinta-se à vontade para entrar em contato e se conectar!</p>
+
+                    <div class="contact-email">
+                        <a href="mailto:kelvin03mattos@gmail.com"
+                            aria-label="Enviar e-mail para kelvin03mattos@gmail.com">kelvin03mattos@gmail.com</a>
+                        <button type="button" id="copy-email" aria-label="Copiar e-mail" title="Copiar e-mail">
+                            <i class="bi bi-copy"></i>
+                        </button>
+                    </div>
+
+                    <div class="contact-social">
+                        <a href="https://github.com/kelvinmattosdev" target="_blank" aria-label="GitHub">
+                            <i class="bi bi-github"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/kelvinkauanmelomattos/" target="_blank"
+                            aria-label="LinkedIn">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="site-footer">
+        <a class="footer-social" href="https://github.com/kelvinmattosdev" target="_blank" aria-label="GitHub">
+            <i class="bi bi-github"></i>
+            <span>GitHub</span>
+        </a>
+
+        <a class="footer-social" href="https://www.linkedin.com/in/kelvinkauanmelomattos/" target="_blank"
+            aria-label="LinkedIn">
+            <i class="bi bi-linkedin"></i>
+            <span>LinkedIn</span>
+        </a>
+
+        <span>Desenvolvido por Kelvin · © 2026 Kelvin Mattos</span>
+
+        <span>Veja também o
+            <a href="https://github.com/kelvinmattosdev/Meu-Portfolio.git" target="_blank">repositório</a>
+            desse projeto.
+        </span>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS próprio -->
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>

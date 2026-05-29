@@ -1,0 +1,15 @@
+{
+  "name": "meu-portfolio",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "bun run ./src/server.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.14"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
