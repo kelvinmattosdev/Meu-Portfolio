@@ -27,6 +27,10 @@ export const portfoliosRoutes: Routes = {
         async GET(req) {
             const url = new URL(req.url);
 
+            if (url.pathname === "/") {
+                return redirect("/portfolio");
+            }
+
             let pathname = decodeURIComponent(url.pathname)
                 .replace(/^\/+/, "")
                 .replace(/\/+$/, "");

@@ -3,6 +3,7 @@ import { join } from "node:path";
 import { assets } from "./routes/assets.routes";
 import { portfoliosRoutes } from "./routes/portfolios.routes";
 import chalk from "chalk";
+import { redirect } from "./functions/redirect";
 
 function portfolioToTimestamp(portfolio: string) {
     const match = portfolio.match(/^(\d{2})-(\d{2})-(\d{4})$/);
@@ -54,7 +55,10 @@ Bun.serve(
         routes: {
             ...portfoliosRoutes,
             ...assets
-        }
+        },
+        fetch(req, server) {
+            return new Response("Not found", { status: 404 });
+        },
     }
 )
 
