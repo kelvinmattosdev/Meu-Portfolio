@@ -1,6 +1,28 @@
+import { redirect } from "../functions/redirect";
+import { latestPortfolio } from "../server";
 import type { Routes } from "../types/routesGlobal.types";
 
 export const portfoliosRoutes: Routes = {
+    "/portfolio": {
+        async GET(req) {
+            if (!latestPortfolio) {
+                return new Response("Nenhum portfólio disponível", { status: 404 });
+            }
+
+            const filePath = `./${latestPortfolio}/template/index.html`;
+            const file = Bun.file(filePath);
+
+            if (!(await file.exists())) {
+                return new Response("Portfolio não encontrado", { status: 404 });
+            }
+
+            return new Response(file, {
+                headers: {
+                    "Content-Type": "text/html; charset=utf-8",
+                },
+            });
+        }
+    },
     "/*": {
         async GET(req) {
             const url = new URL(req.url);

@@ -1,3 +1,4 @@
+import { latestPortfolio } from "../server";
 import type { Routes } from "../types/routesGlobal.types";
 
 function getContentType(path: string) {
@@ -25,9 +26,13 @@ export const assets: Routes = {
 
             const refererUrl = new URL(referer);
 
-            const portfolioName = refererUrl.pathname
+            let portfolioName = refererUrl.pathname
                 .replace(/^\/+/, "")
                 .split("/")[0];
+
+            if (refererUrl.pathname === "/portfolio") {
+                portfolioName = latestPortfolio!;
+            }
 
             if (!portfolioName) {
                 return new Response("Portfolio não identificado", { status: 400 });
@@ -45,6 +50,7 @@ export const assets: Routes = {
             const file = Bun.file(filePath);
 
             if (!(await file.exists())) {
+                console.error(filePath, "não encontrado para referer", referer);
                 return new Response(`Asset não encontrado: ${filePath}`, {
                     status: 404,
                 });
